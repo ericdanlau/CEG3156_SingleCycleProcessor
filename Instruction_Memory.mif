@@ -1,0 +1,28 @@
+DEPTH = 256;
+WIDTH = 32;
+
+ADDRESS_RADIX = HEX;
+DATA_RADIX = BIN;
+
+CONTENT
+BEGIN
+
+-- Use no operations (nop)
+[00..FF]: 00000000;
+
+--MIPS instructions
+00: 8C020000; --lw $2,0
+04: 8C030001; --lw $3,0
+08: 00430822; --sub $1,$2,$3
+0C: 00232025; --or $4,$1,$3
+10: AC040003; --sw $4,3
+14: 00430820; --add $1,$2,$3
+18: AC010004; --sw $1,4
+1C: 8C020003; --lw $2,3
+20: 8C020004; --lw $3,4
+24: 08000003; --j 11
+28: 1021FFF5; --beq $1,$1,-44
+2C: 1022FFFE; --beq $1,$2,-8
+30: 1021FFF7; --beq $1,$1,-9
+
+END;
