@@ -3,7 +3,7 @@ use ieee.std_logic_1164.all;
 
 entity ControlUnit is
 	port(Inst : in std_logic_vector(5 downto 0);
-		RegDst, Branch, MemRead, MemtoReg, MemWrite, RegWrite, ALUSrc : out std_logic;
+		RegDst, Branch, MemRead, MemtoReg, MemWrite, RegWrite, ALUSrc, Jump : out std_logic;
 		ALUOp : out std_logic_vector(1 downto 0));
 end entity;
 
@@ -13,6 +13,7 @@ begin
 
 	RegDst <= not(Inst(5)) and not(Inst(4)) and not(Inst(3)) and not(Inst(2)) and not(Inst(1)) and not(Inst(0));
 	Branch <= not(Inst(5)) and not(Inst(4)) and not(Inst(3)) and Inst(2) and not(Inst(1)) and not(Inst(0));
+	Jump <= not(Inst(5)) and not(Inst(4)) and not(Inst(3)) and not(Inst(2)) and Inst(1) and not(Inst(0));
 	MemRead <= Inst(5) and not(Inst(4)) and not(Inst(3)) and not(Inst(2)) and Inst(1) and Inst(0);
 	MemtoReg <= Inst(5) and not(Inst(4)) and not(Inst(3)) and not(Inst(2)) and Inst(1) and Inst(0);
 	MemWrite <= Inst(5) and not(Inst(4)) and Inst(3) and not(Inst(2)) and Inst(1) and Inst(0);

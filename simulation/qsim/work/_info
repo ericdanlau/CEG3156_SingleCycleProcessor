@@ -1,0 +1,85 @@
+m255
+K3
+13
+cModel Technology
+Z0 dH:\CEG3156_Lab_2\simulation\qsim
+vDatapath
+Z1 IWTHWD7N[10YSfWM:<QbcD0
+Z2 V?]5`:2V80iJU:IHI049G93
+Z3 dH:\CEG3156_Lab_2\simulation\qsim
+Z4 w1773343830
+Z5 8Single_cycle_RISC.vo
+Z6 FSingle_cycle_RISC.vo
+L0 31
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 !s90 -work|work|Single_cycle_RISC.vo|
+Z9 o-work work -O0
+Z10 n@datapath
+!i10b 1
+Z11 !s100 RozDL^[nnMZhM`2];4GgH0
+!s85 0
+Z12 !s108 1773343833.175000
+Z13 !s107 Single_cycle_RISC.vo|
+!s101 -O0
+vDatapath_vlg_check_tst
+!i10b 1
+Z14 !s100 DLBdjXG_Tkf]JV[Fl4<Ol1
+Z15 IP6bVfg7fb0h;SC=^9@QI;0
+Z16 V4ZnIDdZ;E6VV5_TcDLbbQ0
+R3
+Z17 w1773343828
+Z18 8Single_cycle_RISC.vt
+Z19 FSingle_cycle_RISC.vt
+L0 59
+R7
+r1
+!s85 0
+31
+Z20 !s108 1773343833.634000
+Z21 !s107 Single_cycle_RISC.vt|
+Z22 !s90 -work|work|Single_cycle_RISC.vt|
+!s101 -O0
+R9
+Z23 n@datapath_vlg_check_tst
+vDatapath_vlg_sample_tst
+!i10b 1
+Z24 !s100 ]T0TL`7=RIU@n3UX[N2d30
+Z25 IE2WhV[9]jd8eHgY3OENH_3
+Z26 V9iXYVTQ63J6jY8ObmA@h11
+R3
+R17
+R18
+R19
+L0 29
+R7
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R9
+Z27 n@datapath_vlg_sample_tst
+vDatapath_vlg_vec_tst
+!i10b 1
+!s100 dPnL^;DEIaSYBaHm5l_5P3
+I2k^9CU_<49Vb1_:TJk_oK0
+Z28 V4LSCebLYh<Lb7?m[@][QW1
+R3
+R17
+R18
+R19
+Z29 L0 1052
+R7
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R9
+Z30 n@datapath_vlg_vec_tst

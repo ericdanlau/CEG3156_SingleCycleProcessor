@@ -1,0 +1,13 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity decoder8 is
+	port(i_value : in std_logic_vector(2 downto 0);
+		o_value : out std_logic_vector(7 downto 0));
+end entity;
+
+architecture rtl of decoder8 is
+
+begin 
+
+	o_value(7) <= 

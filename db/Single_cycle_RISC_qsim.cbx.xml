@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="Single_cycle_RISC_qsim">
+		<CBX_INST_ENTRY INSTANCE_NAME="|Datapath|DataMem:DataMemory|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_bqs1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Datapath|InstructionMem:InstMem|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_vea1.tdf"/>
+	</PROJECT>
+</LOG_ROOT>
