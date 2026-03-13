@@ -4,6 +4,7 @@ use ieee.std_logic_1164.all;
 entity Datapath is
 	port(--RegDst, Branch, MemRead, MemtoReg, MemWrite, RegWrite, ALUSrc, 
 		Greset, Gclock : in std_logic;
+		ValueSelect : in std_logic_vector(2 downto 0);
 		Zero, MemWriteOut, RegWriteOut, BranchOut, RegisterDst, MemoryToRegister, MemoryRead, JumpOut, ALUSRC : out std_logic;
 		ALUop1, ALUop2 : out std_logic;
 		InstructionOut : out std_logic_vector(31 downto 0);
@@ -206,6 +207,18 @@ begin
 			i_1 => int_ALUresult,
 			i_sel => ctrl_MtoR,
 			o_y => int_MemOut);
+	
+	MuxOutMux : mux8to1_8bit
+		port map(i_0 => int_PCSrc,
+			i_1 => int_ALUresult,
+			i_2 => int_FileR1,
+			i_3 => int_FileR2,
+			i_4 => int_MemOut,
+			i_5 => "00000000",
+			i_6 => "00000000",
+			i_7 => "00000000",
+			i_sel => ValueSelect,
+			o_y => MuxOut);
 			
 	Zero <= int_zeroFlag;
 	MemWriteOut <= ctrl_MemW;
