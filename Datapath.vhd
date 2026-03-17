@@ -2,7 +2,7 @@ library ieee;
 use ieee.std_logic_1164.all;
 
 entity Datapath is
-	port(--RegDst, Branch, MemRead, MemtoReg, MemWrite, RegWrite, ALUSrc, 
+	port(
 		Greset, Gclock : in std_logic;
 		ValueSelect : in std_logic_vector(2 downto 0);
 		Zero, MemWriteOut, RegWriteOut, BranchOut, RegisterDst, MemoryToRegister, MemoryRead, JumpOut, ALUSRC : out std_logic;

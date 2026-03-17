@@ -35,7 +35,7 @@ begin
 	carry(7) <= (i_a(6) and i_b(6)) or (i_a(6) and carry(6)) or (i_b(6) and  carry(6));
 	carry(8) <= (i_a(7) and i_b(7)) or (i_a(7) and carry(7)) or (i_b(7) and  carry(7));
 	
-	zero <= not(int_Value(0) and int_Value(1) and int_Value(2) and int_Value(3) and int_Value(4) and int_Value(5) and int_Value(6) and int_Value(7));
+	zero <= not(int_Value(0)) and not(int_Value(1)) and not(int_Value(2)) and not(int_Value(3)) and not(int_Value(4)) and not(int_Value(5)) and not(int_Value(6)) and not(int_Value(7));
 	o_cout <= carry(8);
 	o_Value <= int_Value;
 end rtl;
